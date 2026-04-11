@@ -1,0 +1,44 @@
+.picstyle {
+    border-radius:30px;
+    width:200px;
+    display:block;
+    margin-left:650px;
+    margin-top:150px;
+
+}
+
+body {
+    background:#2e406b;
+}
+
+footer {
+    padding:30px;
+    color:white;
+    margin-left:-20px;
+}
+
+.logo {
+    padding-top: 30px;
+}
+
+.lov {
+    padding-top: 30px;
+    text-decoration: none !important;
+    color: inherit;
+}
+
+
+.love {
+   background-color: yellow;
+   text-align: center;
+   text-decoration:none;
+   font-size:20px;
+   color:rgb(180, 244, 61);
+   
+
+}
+
+.footer {
+    color:white;
+}
+
