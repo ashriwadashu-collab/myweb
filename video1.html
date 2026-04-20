@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+
+
+
+h1 {
+  text-align: center;
+  background: black;
+  color: #fff;
+  padding: 15px;
+  margin-top:-10px;
+  cursor:pointer;
+}
+
+h1:hover{
+  color:blue;
+}
+
+.logo{
+  text-align: center;
+  background:yellow;
+  color:black;
+  font-size: 20px;
+  cursor:pointer;
+  padding:2px;
+}
+
+.logo:hover{
+  color:red;
+}
+
+.container {
+  height: 50vh;
+}
+
+.sidebar {
+  width: 180px;
+  background: #222;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #ea9494;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor:pointer;
+  text-align: center;
+}
+
+.sidebar a:hover {
+  background: #ff3e7f;
+}
+
+@media (max-width: 880px) and (min-width: 650px) {
+
+  iframe {
+    height: 70vh;
+  }
+
+</style>
+</head>
+<header id="top">
+         <div class="logo">
+                <h2>HARI SHANKAR</h2>
+            </div>
+    </header>
+<body>
+<h1>Iframe Practice (YouTube)</h1>
+<div class="container">
+   <div class="sidebar">
+      <a href="https://www.youtube.com/embed/1pnKd6YHmV4?si=vXLQ8hEGAwxrI0p0" target="frame">Movie Trailer</a>
+      <a href="https://youtu.be/W2P1jPZAZtU?si=nrUqt3LbAgvlNn8M" target="frame">motu patlu song</a>
+      <a href="https://youtube.com/shorts/AM9ZsOyfdxU?si=RT5So2xiA7OFXM0n" target="frame">oggy</a>
+      <a href="https://youtube.com/shorts/VOYzebP0bWw?si=KUHSSDVTn7e_XKry" target="frame">motu patlu funny</a>
+    </div>
+</div>
+</div>    
+</body>
+</footer>
+</html>
