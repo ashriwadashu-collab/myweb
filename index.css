@@ -25,7 +25,7 @@ header{
     text-align:center;
     cursor:pointer;
     font-weight: bold;
-    font-size: 20px;
+    
 }
 
 
@@ -80,22 +80,40 @@ body {
 
 @media(max-width:768px){
 .picture{
-    margin-left: -450px;
-    margin-top: -90px;
+    margin-left: -420px;
+    margin-top: -80px;
     cursor:pointer;
 }
+
+.picstyle{
+    width:150px;
+    height:200px;
+}
+
+header{
+    height:71px;
+    width:626px;
+    font-weight: bold;
+
+}
+
+.logo{
+    padding-top: 25px;
+}
+
 
 h1{
     text-align: center;
     color:white;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 20px;
+    margin-top: 35px;
     cursor:pointer;
+    text-align: center;
 }
 
 span{
     color:yellow;
-    margin-top: 20px;
+    margin-top: 30px;
     cursor:pointer;
 }
 
@@ -103,14 +121,14 @@ h2{
     text-align: center;
     color:white;
     margin-top: -10px;
-    margin-top: 20px;
+    margin-top: 30px;
     cursor:pointer;
 }
 
 p{
     text-align: center;
     color:white;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
     cursor:pointer;
 }
@@ -123,16 +141,25 @@ a{
     color:rgb(7, 7, 7);
     line-height: 30px;
     cursor:pointer;
+    font-size: 10px;
+    line-height: 27px;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer{
     background: rgb(241, 197, 144);
+    width:616px;
 }
 
 a:hover{
     color:red;
  }
+
+ body{
+    width:600px;
+ }
+
 }
 
 @media(min-width: 1024px){
@@ -175,7 +202,7 @@ a{
     color:rgb(7, 0, 0);
     line-height: 30px;
     cursor:pointer;
-    font-weight: bold;
+
 }
 
 a:hover{
@@ -185,10 +212,16 @@ a:hover{
 
 footer{
     background:rgb(241, 197, 144);
+    height:132px;
 }
 
 .picture{
     margin-top: -90px;
+}
+
+header{
+    width:1544px;
+    height:85px;
 }
 
 
