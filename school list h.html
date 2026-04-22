@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+<title>school list</title>
+<style>
+
+html
+{
+scroll-behavior:smooth;
+}
+
+@keyframes blink
+{
+from{opacity:0;color:yellow;}
+to{opacity:1;color:YELLOW}
+}
+
+header
+{
+text-align:center;
+box-sizing:border-box;
+background:black;
+padding:30px;
+color:white;
+font-size:50px;
+box-shadow:10px 10px 10px gray;
+margin-top:10px;
+}
+
+#my
+{
+color:white;
+transition:0.50s;
+animation:blink 1s infinite alternate;
+}
+
+@keyframes change
+{
+10%{content:" MY NAME IS HARI SHANKAR";}
+30%{content:"I AM A STUDENT";transform:scale(1.5);}
+40%{content:"I FROM A PANIPAT";}
+50%{content:"MY AGE IS 18 ";}
+60%{content:"NOW I LIVE IN DELHI";}
+70%{content:"I STUDY AT ARENA ANIMATION INSTITUTE";}
+80%{content:"I AM LEARING WEB DESIGN AND GRAPHIC DESIGN";}
+}
+
+
+
+#news::after
+{
+content:"H R";
+transition:2s;
+animation:change 30s infinite alternate;
+}
+
+section
+{
+box-shadow:10px 10px 10px gray;
+text-align:justify;
+padding:50px;
+height:800px;
+}
+
+section h1
+{
+text-align:center;
+}
+
+li{    
+display:inline;
+padding:130px;
+margin-top:20px;
+}
+
+
+main table
+{
+margin:auto;
+margin-bottom:30px;
+text-align: center;
+}
+
+main table tr
+{
+background:teal;
+transition:1.50s;
+}
+
+main table tr:hover
+{
+background:white;
+cursor:pointer;
+}
+
+main table td
+{
+width:10%;
+transition:0.5s;
+}
+
+main table td:hover
+{
+background:orange;
+}
+
+
+</style>
+<a name="top">
+
+<header>
+<div id="news"></div>
+</header>
+<body>
+
+
+<main>
+<table border="1" cellpadding="10" cellspacing="1">
+<caption style="color:green;font-size:40px;font-family:arial black;">mark list</caption>
+
+<tr style="background:orange;color:rgb(252, 254, 253)">
+
+<th colspan="6">Modern School</th></tr>
+<tr style="background:purple;color:white">
+<th>Roll no</th><th>Name</th><th>Math</th><th>English</th>
+<th>Science</th><th>Computer</th>
+</tr>
+
+<tr>
+<td>101</td><td>amit kumar</td><td>78</td><td>89</td><td>45</td><td>99</td>
+</tr>
+
+<tr>
+<td>102</td><td>raj kumar</td><td>65</td><td>76</td><td>34</td><td>76</td>
+</tr>
+
+<tr>
+<td>103</td><td>raj kumar</td><td>65</td><td>76</td><td>34</td><td>76</td>
+</tr>
+
+<tr>
+<td>104</td><td>raj kumar</td><td>65</td><td>76</td><td>34</td><td>76</td>
+</tr>
+
+<tr>
+<td>105</td><td>raj kumar</td><td>65</td><td>76</td><td>34</td><td>76</td>
+</tr>
+
+<tr>
+<td>106</td><td>raj kumar</td><td>65</td><td>76</td><td>34</td><td>76</td>
+</tr>
+
+</table>
+</body>
+
+</main>
+
+</html>
