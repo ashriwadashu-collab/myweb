@@ -1,43 +1,208 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice</title>
-</head>
-<link href="index.css" rel="stylesheet" type="text/css">
-<style>
-</style>
-<body>
-    <header>
-        <div class="logo">HARISHANKAR ROHILLA</div>
-    <nav class="lov">
-        <a href="#">HOME</a>
-        <a href="acwh.html">WORK</a>
-        <a href="">ABOUT ME</a>
-        <a href="">CONTACT</a>
-    
-    </nav>
-    </header>
-    <main>
-        <div class="picture">
-        <img src="images/f12.jpg"class="picstyle">
-        </div>
-    </a>
-    </main>
-    
-    <div class="bot">
-        <h1>HEELO I'M <SPAN>HARI SHANKAR</SPAN></h1>
-        <h2>Creative design & Development</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab beatae, totam officiis sit necessitatibus ex illo veritatis numquam. Odit a voluptates alias, autem repellendus natus eligendi </p>
+  <meta charset="UTF-8">
+  <title>HARI SHANKAR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #fbf9f9;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #ddd;
+    }
+
+    header h2 {
+    color: #050505;
+    font-weight: BOLD;
+    cursor:pointer;
+    }
+
+    header h2:hover{
+        color:rgb(232, 8, 49);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      font-weight: BOLD;
+      cursor:pointer
+    }
+
+    nav a:hover {
+      color: #f56709;
+    }
+
+  
+    .LOVE {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 60px;
+      background: #96c3f0;
+    }
+
+    .WORK-HERE {
+      max-width: 600px;
+    }
+
+    .WORK-HERE h5 {
+      letter-spacing: 2px;
+      color: #000004;
+      margin-bottom: 10px;
+      font-size: 20PX;
+      cursor:pointer;
+    }
+
+    .WORK-HERE h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      cursor:pointer;
+    }
+
+    .work-here h1 span {
+      color: #076969;
+      
+    }
+
+    .WORK-HERE h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+     color: #030303;
+     cursor:pointer;
+    }
+
+    .WORK-HERE p {
+      color: #060606;
+      line-height: 1.6;
+      cursor:pointer;
+    }
+
+    .all-img img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      cursor:pointer;
+    }
 
     
+    footer {
+      background: #FFDAB4;
+      color: rgb(7, 7, 7);
+      padding: 40px 20px;
+    }
+
+
+    footer a {
+      display: block;
+      color: #060606;
+      text-decoration: none;
+      margin: 5px 0;
+      font-size: 14px;
+      font-weight: BOLD;
+      cursor:pointer;
+      line-height: 20px;
+      padding-top: -10px;
+      margin-top: 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color:white;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 10px;
+      font-weight: bold;
+      cursor:pointer;
+    }
+
+    p{
+        cursor:pointer;
+        font-weight: bold;
+        line-height:30px;
+    }
+
+    h3{
+        cursor:pointer;
+        padding-bottom: 10px;
+    }
+
+  
+    @media(max-width: 768px) {
+      .LOVE {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .all-img {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <header>
+    <h2>HARI SHANKAR</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="acwh.html">Practice Work</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  
+  <section class="LOVE">
+    <div class="WORK-HERE">
+      <h5>HELLO</h5>
+      <h1>I'm <span>Hari shankar</span></h1>
+      <h2> web Designer</h2>
+      <p>
+        Welcome to my web page, I am a UI/UX design learner. I am also learning graphic design and web design.
+         I like to create simple and user-friendly designs. I am working to improve my creativity and problem-solving skills.
+      </p>
+    </div>
+
+    <div class="all-img">
+      <img src="images/fll6.jpg" alt="Profile Image">
+    </div>
+  </section>
+
+  
+  <footer>
+    <a href="index.html">Home</a>
+    <a href="acwh.html"> Work</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+
+    <h3 style="margin-top:20px;">Contact</h3>
+    <p>Email:ashurohilla@gmail.com</p>
+    <p>Location:India , delhi</p>
+
+    <div class="footer-bottom">
+     |  All Rights Reserved
+    </div>
+  </footer>
+
 </body>
-<footer>
-    <nav class="loe">
-        <a href="#">HOME</a>
-        <a href="acwh.html">WORK</a>
-        <a href="">ABOUT ME</a>
-        <a href="">CONTACT</a>
-</footer>
 </html>
