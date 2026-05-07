@@ -39,7 +39,7 @@ ol{
 ol li{
     list-style: none;
     width:15%;
-    background:rgb(243, 192, 192);
+    background:rgb(254, 252, 252);
     box-shadow:0 4px 8px rgba(0,0,0,0.2);
     height:100px;
     padding:15px;
@@ -47,7 +47,8 @@ ol li{
     transition: 0.3s;
     text-align: center;
     padding-top: 80px;
-
+    box-shadow: 5px 5px 5px black;
+    text-transform: capitalize;
 }
 
 ol li:hover{
