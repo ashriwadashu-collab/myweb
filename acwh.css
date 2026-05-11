@@ -68,6 +68,10 @@ ol li:hover a{
     color:white;
 }
 
+h2{
+    
+}
+
 /* Mobile Responsive */
 @media(max-width:768px){
     ol li{
