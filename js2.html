@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @media (max-width: 768px){
+        p img{
+            margin-left:90px; 
+        }
+    }
+</style>
+<body>
+    <h1>creating tage by javascript</h1>
+
+    <script>
+    
+    var p = document.createElement("img")
+    document.body.appendChild(p)
+    p.src="images/aotm1.jpg"
+    p.style="transition:0.50s;margin:20px;border-radius:10px;cursor:pointer;"
+    document.title ="No Error"
+    p.style.width="30%"
+    p.style.boxShadow="10px 10px 10px gray"
+
+    p.onclick = function()
+    {
+        p.src="images/2d1.jpg"
+    }
+    p.onmouseout = function()
+    {
+        p.src="images/aotm1.jpg"
+        p.style.transform="scale(1)"
+    }
+    p.onmouseover = function()
+    {
+        //this.style.transform="scale(1.30)"
+    }
+
+
+    </script>
+</body>
+</html>
