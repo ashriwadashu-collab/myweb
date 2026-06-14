@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #clock
+    {
+        color:beige;
+        font-size: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background: purple;
+        width:250px;
+        padding:20px;
+        text-align: center;
+        box-shadow: 10px 10px 10px gray;
+    }
+</style>
+<body>
+
+    <h1>working with date class in js</h1>
+    <div id="clock">time</div>
+    <button onclick="st()">Start Clock</button>
+    <button onclick="sto()">Stop Clock</button>
+
+   <script>
+        function show()
+        {
+    var d = new Date()
+    var t = document.getElementById("clock")
+     t.innerHTML = d.toLocaleTimeString()
+
+        }
+     var timer 
+        function st()  
+        {
+            timer = setInterval("show()",1000)
+        }
+
+
+        function sto()  
+        {
+           clearInterval(timer)
+        }
+
+
+
+        document.title="No Error"
+    </script>
+</body>
+</html>
