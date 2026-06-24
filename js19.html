@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #nav{
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    #nav button{
+        background:black;
+        color:white;
+        padding:10px;
+        border:none;
+        width:15vh;
+        cursor:pointer;
+        font-size: 15px;
+        border-radius: 20px;
+    }
+
+    #m, #m2, #m3{
+        width:80px;
+        margin-top: 2px;
+        background: lightgreen;
+        color:black;
+        padding:0px;
+    }
+
+    li{
+        list-style-type: none;
+        padding:10px;
+        cursor:pointer;
+    }
+
+    li:hover{
+        background:black;
+        color:lightgreen;
+    }
+    .toggle{
+        display:none;
+    }
+</style>
+<body>
+    <div id="nav">
+
+<div>
+<button onclick ="show_hide_menu(event)" id="menu1">main</button>
+<ol id="m" class="toggle">
+    <li>menu</li>
+    <li>menu</li>
+    <li>menu</li>
+</ol>
+</div>
+
+
+<div>
+<button onclick="show_hide_menu(event)" id="menu2">project</button>
+<ol id="m2" class="toggle">
+    <li>menu</li>
+    <li>menu</li>
+    <li>menu</li>
+</ol>
+</div>
+
+<div>
+<button onclick="show_hide_menu(event)" id="menu3">social media</button>
+<ol id="m3" class="toggle">
+    <li>menu</li>
+    <li>menu</li>
+    <li>menu</li>
+</ol>
+</div>
+</div>
+
+<script>
+    var menu_visible = false;
+
+    var m1 = document.getElementById("m");
+
+    function show_hide_menu(event)
+    {
+        var mid = event.target.id
+        
+        m1.classList.add("toggle");
+        m2.classList.add("toggle");
+        m3.classList.add("toggle");
+
+        switch(mid)
+        {
+            case "menu1":
+                m1.classList.remove("toggle");
+                document.title = "menu1"
+                break;
+                case "menu2":
+                m2.classList.remove("toggle");
+                document.title = "menu2"
+                break;
+                case "menu3":
+                m3.classList.remove("toggle");
+                document.title = "menu3"
+                break;
+        }
+    }
+
+    window.onclick = function(event)
+    {
+        if((event.target == "[object HTMLHtmlElement]")||(event.target == "[object HTMLUnknowElement]"))
+
+        {
+            m1.classList.add("toggle")
+            m2.classList.add("toggle")
+            m3.classList.add("toggle")
+        }
+    }
+</script>
+</body>
+</html>

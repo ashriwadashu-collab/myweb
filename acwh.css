@@ -5,28 +5,64 @@ body{
     background:#f2f2f2;
 }
 
-header{
-    background:rgb(8, 79, 8);
-    color:white;
+
+  body {
+    background: #f56709;
+    //background-color: #F8FAFC; 
+    color: black;
+  }
+
+  .dark {
+    background: black;
+    color: white;
+  }
+
+  /* Button */
+
+  #btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    background: none;
     text-align: center;
-    padding:15px;
-    font-weight: bold;
-    cursor:pointer;
-}
+    align-items: center;
+  }
 
-header:hover{
-    color:red;
-}
+  header {
+    background: #fbf9f9;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ddd;
+  }
 
-h2{
-    text-align: center;
-    cursor:pointer;
-    margin-top: 20px;
-}
+  header h2 {
+    color: #050505;
+    font-weight: BOLD;
+    cursor: pointer;
+  }
 
-h2:hover{
-    color:yellow;
-}
+  header h2:hover {
+    color: rgb(232, 8, 49);
+  }
+
+  nav a {
+    margin:20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight:bold;
+    cursor: pointer
+  }
+
+  nav a:hover {
+    color: #f56709;
+  }
 
 
 ol{
@@ -34,12 +70,13 @@ ol{
     flex-wrap: wrap;
     justify-content: center;
     gap:10px;
+    margin-top: 100px;
 }
 
 ol li{
     list-style: none;
     width:15%;
-    background:rgb(254, 252, 252);
+    background-color: #F0F9FF; 
     box-shadow:0 4px 8px rgba(0,0,0,0.2);
     height:100px;
     padding:15px;
