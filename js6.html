@@ -6,6 +6,45 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 </head>
+<style>
+   h1 input {
+      margin: auto;
+      display: block;
+      background: black;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+   }
+
+   h1 #t1,
+   #t2,
+   #r {
+      margin: auto;
+      display: block;
+   }
+
+   .btn-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+   }
+
+   button {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 30px;
+   }
+
+   h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+
+
+</style>
 
 <body>
    <h1>
@@ -14,10 +53,12 @@
       No 2 <input type="number" id="t2" value="0"><br><br>
       Result<input type="number" id="r" value="0"><br><br>
 
-      <button onclick="f1()">+</button>
-      <button onclick="f2()">-</button>
-      <button onclick="f3()">*</button>
-      <button onclick="f4()">/</button>
+      <div class="btn-box">
+         <button onclick="f1()">+</button>
+         <button onclick="f2()">-</button>
+         <button onclick="f3()">*</button>
+         <button onclick="f4()">/</button>
+      </div>
 
       <script>
          var n1 = document.getElementById("t1")

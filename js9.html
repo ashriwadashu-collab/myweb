@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pic{
+        width:30%;
+        cursor:pointer;
+        box-shadow: 10px 10px 10px ;
+        transition:0.50s;
+        margin:20px;
+    }
+</style>
+<body>
+    <h1>
+        loop in html (for loop)
+    </h1>
+    <script>
+        function preload()
+    {
+
+        document.title="no error"
+        for(var i = 1;i<=5;i++)
+    {
+        var p = new Image()
+        document.body.appendChild(p)
+        p.className="pic"
+        p.src="images/p"+i+".jpg"
+
+
+        p.onmouseover =function()
+        {
+            this.style.width="35%"
+        }
+
+        p.onmouseout =function()
+        {
+            this.style.width="30%"
+        }
+
+    }
+
+    }
+
+    document.addEventListener("load",preload())
+    </script>
+    
+</body>
+</html>

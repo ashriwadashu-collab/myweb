@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array in html</h1>
+    <script>
+        //index array
+        var mycolor = new Array(5)
+        //mycolor[1]=prompt("enter color","cyan")
+        mycolor[3]="green"
+        mycolor[0]=true
+        mycolor[4]=29393
+
+        //alert(mycolor[4])
+        //document.bgcolor = mycolor[1]
+        //alert(mycolor)
+        //document.write("<h1> todays color = "+mycolor[3])
+
+            var weekname = ["sunday","monday","wednesday","friday"]
+            //alert(weekname.length)
+            //document.write(weekname)
+            //document.write(weekname[3])
+            //document.write("today is "+weekname[0])
+
+            for(var i = 0;i<weekname.length;i++)
+        {
+            document.write("<h1>")
+                document.write(weekname[i])
+                document.write("</h1>")
+        }
+
+        document.title="Ready"
+
+        
+    </script>
+</body>
+</html>

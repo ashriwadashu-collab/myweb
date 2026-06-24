@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background:rgb(247, 3, 3);
+        color:white;
+        padding:15px;
+        border:none;
+        text-align: center;
+        margin-left: 600px;
+        cursor:pointer;
+    }
+ 
+    
+</style>
+<body>
+    <script>
+    function mreload()
+    {
+     window.location.reload()
+    }
+    </script>
+
+
+      <button onClick="mreload()">▶️</button>
+
+      
+    </script>
+              <script>
+                   var b = document.createElement("button")
+                   b.innerHTML="Create new  background color"
+                   document.body.appendChild(b)
+                   function randomcolor()
+                   {
+                    var red = Math.round(Math.random()*225)
+                    var blue = Math.round(Math.random()*225)
+                    var green = Math.round(Math.random()*225)
+                    var c = "rgb("+red+", "+blue+", "+green+")"
+                    document.body.style.background = c
+
+                   }
+                   b.onclick = randomcolor
+                   
+                   </script>
+</body>
+</html>

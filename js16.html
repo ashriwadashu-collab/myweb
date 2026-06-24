@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header {
+        width: 30%;
+        height: 500px;
+        margin: auto;
+        box-shadow: 10px 10px 10px gray;
+    }
+
+    header img {
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    @media(max-width:768px) {
+
+        #m {
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        #pic {
+            width: 100%;
+            height: 500px;
+        }
+    }
+</style>
+<h1 id="m"></h1>
+<header>
+
+
+
+    <img id="pic">
+</header>
+
+<body>
+    <script>
+
+        var b = document.body;
+        var d = new Date();
+        var m = document.getElementById("m")
+        var pic = document.getElementById("pic")
+        //pic.src = "images/aotm2.jpg"
+        var today = d.getDay()
+
+        switch (today) {
+            case 1:
+                m.innerHTML += "monday"
+                pic.src = "images/2d1.jpg"
+                document.body.style.backgroundColor = "red";
+                break;
+
+            case 2:
+                m.innerHTML += "tuesday"
+                pic.src = "images/2d2.jpg"
+                document.body.style.backgroundColor = "green";
+                break;
+
+
+            case 3:
+                m.innerHTML += "wednesday"
+                pic.src = "images/2d3.jpg"
+                document.body.style.backgroundColor = "blue";
+                break;
+
+            case 4:
+                m.innerHTML += "thursday"
+                pic.src = "images/2d5.jpg"
+                document.body.style.backgroundColor = "pink";
+                break;
+
+            case 5:
+                m.innerHTML += "friday"
+                pic.src = "images/2d6.jpg"
+                document.body.style.backgroundColor = "yellow";
+                break;
+
+            case 6:
+                m.innerHTML += "saturday"
+                pic.src = "images/2d7.jpg"
+                document.body.style.backgroundColor = "cyan";
+                break;
+
+            case 0:
+                m.innerHTML += "sunday"
+                pic.src = "images/2d8.jpg"
+                document.body.style.backgroundColor = "brown";
+                break;
+        }
+
+
+        document.title = "rwady"
+    </script>
+</body>
+
+</html>
