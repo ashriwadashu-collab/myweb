@@ -4,41 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Setinterval</title>
 </head>
 <style>
-    h1{
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    header {
+        background: black;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #ddd;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    header h2 {
+        color: white;
+        font-weight: BOLD;
+        cursor: pointer;
+    }
+
+    header h2:hover {
+        color: rgb(232, 8, 49);
+    }
+
+    nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-weight: BOLD;
+        cursor: pointer
+    }
+
+    nav a:hover {
+        color: #f56709;
+    }
+
+    h1 {
         text-align: center;
-        text-transform: capitalize;
-        margin:auto;
+        color: black;
+        margin-top: 100px;
+    }
+
+    button {
+        margin-left: 700px;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        color: black;
+        margin-top: 40px;
+
     }
 </style>
+<header>
+    <h2>HARI SHANKAR</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="acwh.html">Practice Work</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 
 <body>
-    <h1>random color generate</h1>
+    <h1> Change Background color </h1>
+
+    <button onClick="sto()">Stop colors</button>
     <script>
         var t
         var r, g, b, c
         function show() {
             r = Math.round(Math.random() * 255)
-            g = Math.round(Math.random() * 225)
-            b = Math.round(Math.random() * 225)
-            c = `rgb(${r},${g},${b})`
+            g = Math.round(Math.random() * 255)
+            b = Math.round(Math.random() * 255)
+            c = `rgb(${r},${b},${g})`
             document.body.style.background = c
-            document.title = c
         }
-
         t = setInterval("show()", 1000)
-        document.body.onclick = function () {
+        function sto() {
             clearInterval(t)
-            alert("Set interval id sto now")
+            alert("Set interval is stop now")
         }
-
-        document.title = "no error"
+        function mreload() {
+            window.loction.reload()
+        }
+        document.write("<button onClick='location.reload()'>Start Again</button>")
 
     </script>
-
-    
 </body>
 
 </html>

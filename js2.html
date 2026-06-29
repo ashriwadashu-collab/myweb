@@ -13,17 +13,85 @@
         box-sizing: border-box;
     }
 
-    h1{
-        text-align: center;
-        text-transform: capitalize;
-        margin-top: 30px;
-    }
+    .dark {
+    background: black;
+    color: white;
+  }
+
+  /* Button */
+
+  #ntn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    background: none;
+  }
+
+  header {
+    background:black;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ddd;
+    position:fixed;
+    top:0;
+    width:100%;
+  }
+
+  header h2 {
+    color:white;
+    font-weight: BOLD;
+    cursor: pointer;
+  }
+
+  header h2:hover {
+    color: rgb(232, 8, 49);
+  }
+
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    font-weight: BOLD;
+    cursor: pointer
+  }
+
+  nav a:hover {
+    color: #f56709;
+  }
+
+  .no h1{
+    margin-top: 100px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+
 
 </style>
+<header>
+  <h2>HARI SHANKAR</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="acwh.html">Practice Work</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <button id="ntn">☀️</button>
+</header>
 
 <body>
+    <div class="no">
     <h1>image change</h1>
-
+</div>
+</div>
     <script>
 
         var p = document.createElement("img")
@@ -49,6 +117,26 @@
 
 
     </script>
+
+     <script>
+
+    var ntn = document.getElementById("ntn")
+
+    ntn.onclick = function () {
+
+      document.body.classList.toggle("dark")
+
+
+      if (document.body.classList.contains("dark")) {
+        ntn.innerHTML = "🌙"
+      }
+      else {
+        ntn.innerHTML = "☀️"
+      }
+
+    }
+
+  </script>
 </body>
 
 </html>

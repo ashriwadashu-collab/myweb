@@ -1,67 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<header>
+    <h2>HARI SHANKAR</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="acwh.html">Practice Work</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 <style>
-    #clock
-    {
-        color:beige;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    header {
+        background: black;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #ddd;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    header h2 {
+        color: white;
+        font-weight: BOLD;
+        cursor: pointer;
+    }
+
+    header h2:hover {
+        color: rgb(232, 8, 49);
+    }
+
+    nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-weight: BOLD;
+        cursor: pointer
+    }
+
+    nav a:hover {
+        color: #f56709;
+    }
+
+    #clock {
+        color: beige;
         font-size: 50px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         background: purple;
-        width:250px;
-        padding:20px;
+        width: 250px;
+        padding: 20px;
         text-align: center;
         box-shadow: 10px 10px 10px gray;
         margin: auto;
-        display:block;
+        display: block;
         margin-top: 100px;
         border-radius: 20px;
     }
 
- button{
-     margin: auto;
-        display:block;
-        display:flex;
-        padding:10px;
-        background:black;
-        color:white;
+    button {
+        margin: auto;
+        display: block;
+        display: flex;
+        padding: 10px;
+        background: black;
+        color: white;
         border-radius: 15px;
         margin-top: 30px;
         justify-content: space-between;
- }
+    }
 </style>
+
 <body>
     <div id="clock">time</div>
     <button onclick="st()">Start Clock</button>
     <button onclick="sto()">Stop Clock</button>
 
-   <script>
-        function show()
-        {
-    var d = new Date()
-    var t = document.getElementById("clock")
-     t.innerHTML = d.toLocaleTimeString()
+    <script>
+        function show() {
+            var d = new Date()
+            var t = document.getElementById("clock")
+            t.innerHTML = d.toLocaleTimeString()
 
         }
-     var timer 
-        function st()  
-        {
-            timer = setInterval("show()",1000)
+        var timer
+        function st() {
+            timer = setInterval("show()", 1000)
         }
 
 
-        function sto()  
-        {
-           clearInterval(timer)
+        function sto() {
+            clearInterval(timer)
         }
 
 
 
-        document.title="No Error"
+        document.title = "No Error"
     </script>
 </body>
+
 </html>
