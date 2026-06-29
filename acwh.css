@@ -7,7 +7,7 @@ body{
 
 
   body {
-    background: #f56709;
+    background:rgb(5, 5, 75);
     //background-color: #F8FAFC; 
     color: black;
   }
@@ -20,8 +20,8 @@ body{
   /* Button */
 
   #btn {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border: none;
     border-radius: 50%;
     font-size: 30px;
@@ -105,8 +105,12 @@ ol li:hover a{
     color:white;
 }
 
-h2{
-    
+.hhh h2{
+    text-align: center;
+    color:white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
 }
 
 /* Mobile Responsive */

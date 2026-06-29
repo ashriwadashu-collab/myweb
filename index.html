@@ -45,7 +45,7 @@
 
     transition: 0.4s;
 
-}
+  }
 
   .dark {
     background: black;
@@ -66,19 +66,19 @@
   }
 
   header {
-    background:black;
+    background: black;
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid #ddd;
-    position:fixed;
-    top:0;
-    width:100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   header h2 {
-    color:white;
+    color: white;
     font-weight: BOLD;
     cursor: pointer;
   }
@@ -90,7 +90,7 @@
   nav a {
     margin-left: 20px;
     text-decoration: none;
-    color:white;
+    color: white;
     font-size: 14px;
     font-weight: BOLD;
     cursor: pointer
@@ -181,19 +181,6 @@
     color: white;
   }
 
-  .footer-bottom {
-    margin-top: 20px;
-    font-size: 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  p {
-    cursor: pointer;
-    font-weight: bold;
-    line-height: 30px;
-  }
-
   h3 {
     cursor: pointer;
     padding-bottom: 10px;
@@ -245,7 +232,7 @@
     <a href="#">Home</a>
     <a href="acwh.html">Practice Work</a>
     <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="contact1page.html">Contact</a>
   </nav>
 
   <button id="ntn">☀️</button>
@@ -292,18 +279,9 @@
   </div>
 
   <footer>
-    <a href="index.html">Home</a>
-    <a href="acwh.html">my Work</a>
-    <a href="#">project</a>
-    <a href="#">Contact</a>
-
     <h3 style="margin-top:20px;">Contact</h3>
     <p>Email:ashurohilla@gmail.com</p>
     <p>Location:India , delhi</p>
-
-    <div class="footer-bottom">
-      | All Rights Reserved
-    </div>
   </footer>
 
 
@@ -327,28 +305,28 @@
 
   </script>
 
-   <script>
+  <script>
 
-        var btn = document.getElementById("btn")
+    var btn = document.getElementById("btn")
 
-        window.onscroll = function () {
-            if (window.scrollY > 200) {
-                btn.style.display = "block"
-            }
-            else {
-                btn.style.display = "none"
-            }
-        }
+    window.onscroll = function () {
+      if (window.scrollY > 200) {
+        btn.style.display = "block"
+      }
+      else {
+        btn.style.display = "none"
+      }
+    }
 
-        btn.onclick = function () {
-            window.scroll({
-                top: 0,
-                behavior: "smooth"
-            })
-        }
+    btn.onclick = function () {
+      window.scroll({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
 
 
-    </script>
+  </script>
 </body>
 
 </html>
