@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    body {
+        background-color:beige;
+    }
+
+    .pic {
+        width: 45%;
+        height: 70%;
+        position: absolute;
+        left: 30%;
+        border-radius: 20px;
+        transition: 2s;
+        margin-top: 20px;
+    }
+
+    h1 {
+        background-color:red;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: white;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <h1>Rotating Banner</h1>
+    <header>
+        <img src="images/2d1.jpg" class="pic">
+        <img src="images/aotm2.jpg" class="pic">
+        <img src="images/2d6.jpg" class="pic">
+        <img src="images/2d5.jpg" class="pic">
+    </header>
+    <script>
+        var plist = document.getElementsByTagName("img")
+        var p1 = plist[3]
+        var p2 = plist[2]
+        var p3 = plist[1]
+        var p4 = plist[0]
+        var c = -1
+        function runbanner() {
+            switch (c) {
+                case 0:
+                    p1.style.transform = "scale(0) rotate(360deg)"
+                    p1.style.opacity = 0
+                    break;
+                case 1:
+                    p2.style.transform = "scale(0) rotate(360deg)"
+                    p2.style.opacity = 0
+                    break;
+                case 2:
+                    p3.style.transform = "scale(0) rotate(360deg)"
+                    p3.style.opacity = 0
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+                    p1.style.transform = "scale(1) rotate(0)"
+                    p2.style.transform = "scale(1) rotate(0)"
+                    p3.style.transform = "scale(1) rotate(0)"
+                    p4.style.transform = "scale(1) rotate(0)"
+                    p1.style.opacity = 1
+                    p2.style.opacity = 1
+                    p3.style.opacity = 1
+                    p4.style.opacity = 1
+                    break;
+            }
+            if (c <= plist.length) {
+                c++
+            }
+            else {
+                c = 0
+            }
+            setTimeout("runbanner()", 2000)
+        }
+        runbanner()
+    </script>
+</body>
+
+</html>

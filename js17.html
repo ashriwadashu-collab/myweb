@@ -1,44 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Image</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: white;
+    }
+
+    header {
+      background: black;
+      color: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .box {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: orange;
+    }
+  </style>
 </head>
+
 <body>
-   <!--
-    <h1><a href="ddata.pdf">down load file</a></h1>
-    --> 
 
-<script>
-    /* working with do while loop */
-    // post tested loop
-    var pw = "abc@123"
+  <header>
+    <h2>HARI SHANKAR</h2>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Practice Work</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="box" id="result">
+    <h1>Enter Password</h1>
+  </div>
+
+  <script>
+
+    var pw = "1111";
+    var turn = 0;
     var response;
-    var turn = 0
 
-    var turn = 0
-          do
-          {
+    do {
 
-            response = prompt("enter your password....")
+      response = prompt("Enter Password");
 
-            if(respons===pw)
-          {
-            alert("valid password")
-            document.write("<h1><a href='ddata.pdf'>download file</a></h1>")
-            break;
-          }
+      if (response === pw) {
 
-          if(turn>=3)
-          {
-            alert("turn over")
-          }
+        alert("Password Correct");
 
-          turn++
-          }while(turn<=3)
-          
-          document.title = "ready"
-</script>
+        document.getElementById("result").innerHTML = `
+          <h1>Password Verified ✅</h1><br>
+
+          <a href="images/2d1.jpg" download>
+            <button>Download Image</button>
+          </a>
+        `;
+
+        break;
+      }
+
+      turn++;
+
+      if (turn >= 3) {
+        alert("3 Chances Over");
+        break;
+      }
+
+    } while (turn < 3);
+
+  </script>
+
 </body>
+
 </html>
