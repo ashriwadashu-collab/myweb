@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin: 10px;
+        color: black;
+    }
+    body{
+        background-color: rgb(252, 245, 245);
+    }
+    h2,p{
+        text-align: center;
+    }
+    h2{
+        cursor: pointer;
+        margin-top: 5%;
+    }
+    button{
+        background:black;
+        color:white;
+        border:none;
+        border-radius: 10px;
+        cursor: pointer;
+        width:15vh;
+        padding:15px;
+        font-size: 18px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+ 
+</style>
+<body>
+ 
+   <h2>What is jQuery?</h2>
+   <button class="text">hide</button>
+    <p id="text1">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+    <br>
+    
+    
+
+    <script>
+    $(document).ready(function(){
+        $(".text").click(function(){
+            $("#text1").toggle("slow")
+
+            setTimeout(function(){
+                $("#text1").show("slow")
+            }, 3000)
+        })
+    })
+</script>
+</body>
+</html>
