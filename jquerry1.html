@@ -11,6 +11,7 @@
     *{
         margin: 10px;
         color: black;
+        cursor:pointer;
     }
     body{
         background-color: rgb(252, 245, 245);
@@ -51,8 +52,12 @@
             $("#text1").toggle("slow")
 
             setTimeout(function(){
-                $("#text1").show("slow")
+             $("#text1").show("slow")
             }, 3000)
+
+            $(".text").mousemove(function(){
+                $("#text1").hide("slow");
+            }, 2000);
         })
     })
 </script>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #000;
+        }
+
+        .menu ol {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            color: white;
+        }
+
+        li {
+            list-style: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown ol {
+            display: none;
+            position: absolute;
+            background: white;
+            color: black;
+            width: 150px;
+        }
+
+
+        #btn {
+            display: none;
+            background: black;
+            color: white;
+            font-size: 25px;
+            border: 0;
+            padding: 10px;
+        }
+
+
+        @media(max-width:768px) {
+
+            #btn {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .menu.active {
+                display: block;
+            }
+
+            .menu ol {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <button id="btn">☰</button>
+
+        <nav class="menu">
+
+            <ol>
+
+                <li class="dropdown">
+                    Project
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ol>
+                </li>
+
+
+                <li class="dropdown">
+                    Practice
+                    <ol>
+                        <li>Animation</li>
+                        <li>Slider</li>
+                        <li>Counter</li>
+                    </ol>
+                </li>
+
+
+                <li class="dropdown">
+                    Social
+                    <ol>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                    </ol>
+                </li>
+
+            </ol>
+
+        </nav>
+
+    </header>
+
+
+    <script>
+
+        $(function () {
+
+            $("#btn").click(function () {
+                $(".menu").toggleClass("active");
+            });
+
+
+            $(".dropdown").click(function () {
+
+                $(".dropdown").not(this)
+                    .children("ol")
+                    .slideUp();
+
+
+                $(this)
+                    .children("ol")
+                    .slideToggle();
+
+            });
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>
