@@ -2,331 +2,522 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>HARI SHANKAR</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
 </head>
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
 
-  body {
-    background: white;
-    color: black;
-  }
-
-
-  #btn {
-
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-
-    width: 60px;
-    height: 60px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #000;
-    color: white;
-
-    font-size: 20px;
-    cursor: pointer;
-
-    box-shadow: 0px 0px 15px gray;
-
-    display: none;
-
-    transition: 0.4s;
-
-  }
-
-  .dark {
-    background: black;
-    color: white;
-  }
-
-  /* Button */
-
-  #ntn {
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    font-size: 30px;
-    cursor: pointer;
-    transition: 0.5s;
-    background: none;
-  }
-
-  header {
-    background: black;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid #ddd;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  header h2 {
-    color: white;
-    font-weight: BOLD;
-    cursor: pointer;
-  }
-
-  header h2:hover {
-    color: rgb(232, 8, 49);
-  }
-
-  nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-weight: BOLD;
-    cursor: pointer
-  }
-
-  nav a:hover {
-    color: #f56709;
-  }
-
-
-  .LOVE {
-    display: flex;
-    justify-content: space-between;
-    padding: 80px 60px;
-    background: #96c3f0;
-    margin-top: 50px;
-  }
-
-  .WORK-HERE {
-    max-width: 600px;
-  }
-
-  .WORK-HERE h5 {
-    letter-spacing: 2px;
-    color: #000004;
-    margin-bottom: 10px;
-    font-size: 20PX;
-    cursor: pointer;
-  }
-
-  .WORK-HERE h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-
-  .work-here h1 span {
-    color: #076969;
-
-  }
-
-  .WORK-HERE h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #030303;
-    cursor: pointer;
-  }
-
-  .WORK-HERE p {
-    color: #060606;
-    line-height: 1.6;
-    cursor: pointer;
-
-  }
-
-  .all-img img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-
-
-  footer {
-    background: #FFDAB4;
-    color: rgb(7, 7, 7);
-    padding: 40px 20px;
-  }
-
-
-  footer a {
-    display: block;
-    color: #060606;
-    text-decoration: none;
-    margin: 5px 0;
-    font-size: 14px;
-    font-weight: BOLD;
-    cursor: pointer;
-    line-height: 20px;
-    padding-top: -10px;
-    margin-top: 10px;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-    color: white;
-  }
-
-  h3 {
-    cursor: pointer;
-    padding-bottom: 10px;
-  }
-
-  .box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 60px 30px;
-    gap: 20px;
-  }
-
-  .box1 img {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    margin: auto;
-    display: block;
-  }
-
-  .box1 h1 {
-    text-align: center;
-    margin-top: 20px;
-    text-transform: capitalize;
-  }
-
-
-  @media(max-width: 768px) {
+    body {
+        background: #F8F9FA;
+        cursor: pointer;
+    }
 
     header {
-      flex-direction: column;
-      gap: 20px;
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        color: black;
+        padding: 20px 80px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        text-align: center;
+        text-transform: capitalize;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        align-items: center;
     }
 
-    .LOVE {
-      flex-direction: column;
-      text-align: center;
+    .logo {
+        font-size: 28px;
+        color: blue;
+        font-weight: 500;
     }
 
-    .all-img {
-      margin-top: 30px;
+    span {
+        color: black;
+        font-size: 20px;
     }
-  }
+
+    nav a {
+        text-decoration: none;
+        margin: 15px;
+        font-size: 21px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .top {
+        background-image: url("images/indexnew.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 85vh;
+        width: 100%;
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        padding: 60px;
+    }
+
+    .top1 h4 {
+        text-transform: capitalize;
+        font-size: 20px;
+        color: blue;
+    }
+
+    .top1 h1 {
+        text-transform: capitalize;
+        font-size: 50px;
+    }
+
+    .top1 h2 {
+        text-transform: capitalize;
+        color: blue;
+        font-size: 40px;
+    }
+
+    .top1 h3 {
+        line-height: 35px;
+        text-transform: capitalize;
+        color: #555;
+        padding-bottom: 30px;
+    }
+
+    .top2 {
+        display: flex;
+        gap: 30px;
+    }
+
+    #ttt {
+        background: blue;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        text-transform: capitalize;
+        padding: 12px;
+        width: 18vh;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    #ttt:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    #tt {
+        background: none;
+        color: black;
+        border-radius: 10px;
+        border: 2px solid blue;
+        font-size: 18px;
+        text-transform: capitalize;
+        padding: 12px;
+        width: 22vh;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    #tt:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .top5 {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 40px;
+        gap: 20px;
+    }
+
+    .top3 {
+        width: 400px;
+        //height: 200px;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        color: black;
+        border-radius: 20px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .top3 h1 {
+        padding-top: 10px;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .top3 h2 {
+        font-size: 10px;
+        text-align: justify;
+        line-height: 23px;
+        padding: 10px 30px;
+        color: #555;
+    }
+
+    .top3 button {
+        background: none;
+        color: black;
+        border-radius: 10px;
+        border: 2px solid blue;
+        font-size: 12px;
+        text-transform: capitalize;
+        padding: 12px;
+        width: 22vh;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .top3:hover button {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .top4 img {
+        width: 80px;
+        padding-top: 50px;
+    }
+
+    .top4 {
+        width: 200px;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        color: black;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+
+    .top6 h1 {
+        text-transform: capitalize;
+        margin-left: 50px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .top6 h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+        height: 3px;
+        background: blue;
+        border-radius: 5px;
+    }
+
+    .top7 {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 40px;
+        gap: 20px;
+    }
+
+    .top8 {
+        width: 400px;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        color: black;
+        border-radius: 20px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .top8 img {
+        width: 40px;
+        padding-top: 30px;
+    }
+
+    .top8 h1 {
+        text-align: left;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+
+    .top8 p {
+        text-align: left;
+        padding-left: 10px;
+        font-size: 14px;
+        color: #555;
+        line-height: 25px;
+    }
+
+    .top8 h2 {
+        text-align: left;
+        padding-left: 10px;
+        font-size: 14px;
+        padding-bottom: 10px;
+        color: blue;
+    }
+
+    .top9 {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 40px;
+        gap: 20px;
+    }
+
+    .top10 {
+        width: 400px;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        color: black;
+        border-radius: 20px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .top10 h1{
+        padding-top: 30px;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 22px;
+        color:blue;
+    }
+
+     .top10 p{
+        padding-top: 10px;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 16px;
+        color:#555;
+        padding-bottom: 30px;
+    }
+
+     footer {
+        background: #111;
+        color: #fff;
+        margin-top: 80px;
+    }
+
+    .footer-container {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding: 60px 0;
+    }
+
+    .footer-box h2 {
+        color: #0d6efd;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .footer-box p {
+        color: #ddd;
+        margin: 12px 0;
+        line-height: 28px;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .footer-box p:hover {
+        color: #0d6efd;
+    }
+
+    .copyright {
+        border-top: 1px solid #333;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .copyright p {
+        color: #bbb;
+        font-size: 16px;
+    }
 </style>
-
 <header>
-  <h2>HARI SHANKAR</h2>
-  <nav>
-    <a href="#">Home</a>
-    <a href="acwh.html">Practice Work</a>
-    <a href="#">About</a>
-    <a href="contact1page.html">Contact</a>
-  </nav>
-
-  <button id="ntn">☀️</button>
+    <div class="logo">Ashu<span> rohilla</span></div>
+    <nav>
+        <a href="#">home</a>
+        <a href="acwh.html">pratice work</a>
+        <a href="#">project</a>
+        <a href="#">contact</a>
+    </nav>
+    <div class="btn">☀️</div>
 </header>
 
 <body>
-
-  <button id="btn">⬆️</button>
-
-  <section class="LOVE">
-    <div class="WORK-HERE">
-      <h5>HELLO</h5>
-      <h1>I'm <span>Hari shankar</span></h1>
-      <h2> web Designer</h2>
-      <p>
-        Welcome to my web page, I am a UI/UX design learner. I am also learning graphic design and web design.
-        I like to create simple and user-friendly designs. I am working to improve my creativity and problem-solving
-        skills.
-      </p>
+    <div class="top">
+        <div class="top1">
+            <h4>hello, i'm</h4>
+            <h1>ashu rohilla</h1>
+            <h2>front end developer</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Minima rerum inventore voluptatum ut
+                laboriosam
+                labore!</h3>
+            <div class="top2">
+                <button id="ttt">hire me</button>
+                <button id="tt">download CV</button>
+            </div>
+        </div>
     </div>
 
-    <div class="all-img">
-      <img src="images/fll6.jpg" alt="Profile Image">
+    <div class="top5">
+        <div class="top3">
+            <h1>about me</h1>
+            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde inventore, error nesciunt eaque at
+                quaerat voluptatibus cupiditate asperiores mollitia labore aperiam, iste officiis quis, distinctio
+                blanditiis sunt vel officia ab.</h2>
+            <button>more about me ></button>
+        </div>
+        <div class="top4">
+            <img src="images/ic1.jpg">
+            <h1>html</h1>
+        </div>
+
+        <div class="top4">
+            <img src="images/ic3.jpg">
+            <h1>css</h1>
+        </div>
+
+        <div class="top4">
+            <img src="images/ic2.jpg">
+            <h1>java script</h1>
+        </div>
+
+        <div class="top4">
+            <img src="images/2a.jpg">
+            <h1>jquerry</h1>
+        </div>
     </div>
-  </section>
 
 
-  <div class="box">
-    <div class="box1">
-      <img src="images/web6.jpg">
-      <h1>web develpment</h1>
+    <div class="top6">
+        <h1>featured projects</h1>
+    </div>
+    </div>
+
+    <div class="top7">
+        <div class="top8">
+            <img src="images/2an.jpg">
+            <h1>website</h1>
+            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Beatae, blanditiis?</p>
+            <h2>html, css, javascript</h2>
+        </div>
+
+        <div class="top8">
+            <img src="images/2an.jpg">
+            <h1>website</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, blanditiis?</p>
+            <h2>html, css, javascript</h2>
+        </div>
+
+        <div class="top8">
+            <img src="images/2an.jpg">
+            <h1>website</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, blanditiis?</p>
+            <h2>html, css, javascript</h2>
+        </div>
+    </div>
+
+    <div class="top6">
+        <h1>what i do</h1>
+    </div>
     </div>
 
 
-    <div class="box1">
-      <img src="images/s3.jpg">
-      <h1>graphic design</h1>
+    <div class="top9">
+        <div class="top10">
+            <h1>front end development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Beatae, blanditiis?</p>
+        </div>
+
+        <div class="top10">
+            <h1>ui/ux design</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, blanditiis?</p>
+        </div>
+
+        <div class="top10">
+            <h1>responsive design</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, blanditiis?</p>
+        </div>
     </div>
+</div>
 
-    <div class="box1">
-      <img src="images/app7.jpg">
-      <h1>ui ux design</h1>
-    </div>
-  </div>
+ <footer>
 
-  <footer>
-    <h3 style="margin-top:20px;">Contact</h3>
-    <p>Email:ashurohilla@gmail.com</p>
-    <p>Location:India , delhi</p>
-  </footer>
+        <div class="footer-container">
 
+            <div class="footer-box">
 
-  <script>
+                <h2>front end developer</h2>
 
-    var ntn = document.getElementById("ntn")
+                <p>
+                    Learn HTML, CSS, JavaScript
+                    with simple explanations and practical examples.
+                </p>
 
-    ntn.onclick = function () {
+            </div>
 
-      document.body.classList.toggle("dark")
+            <div class="footer-box">
 
+                <h2>Quick Links</h2>
 
-      if (document.body.classList.contains("dark")) {
-        ntn.innerHTML = "🌙"
-      }
-      else {
-        ntn.innerHTML = "☀️"
-      }
+                <p>Home</p>
+                <p>practice work</p>
+                <p>project</p>
+                <p>contact</p>
 
-    }
+            </div>
 
-  </script>
+            <div class="footer-box">
 
-  <script>
+                <h2>services</h2>
 
-    var btn = document.getElementById("btn")
+                <p>front end developer</p>
+                <p>ui/us design</p>
+                <p>responsive design</p>
 
-    window.onscroll = function () {
-      if (window.scrollY > 200) {
-        btn.style.display = "block"
-      }
-      else {
-        btn.style.display = "none"
-      }
-    }
+            </div>
 
-    btn.onclick = function () {
-      window.scroll({
-        top: 0,
-        behavior: "smooth"
-      })
-    }
+            <div class="footer-box">
 
+                <h2>Contact</h2>
 
-  </script>
+                <p>Email : ashriwad.com</p>
+                <p>Phone : +91 9876543210</p>
+                <p>India</p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            <p>© 2026 wwebsite. All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
 </body>
-
 </html>

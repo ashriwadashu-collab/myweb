@@ -5,18 +5,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>class work</title>
-  <link href="acwh.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
-<header>
-  <h2>HARI SHANKAR</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="acwh.html">Practice Work</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background: #F8F9FA;
+    cursor: pointer;
+  }
+  
 
-  <button id="btn">☀️</button>
+
+  .btn {
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    color: black;
+    padding: 20px 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    text-transform: capitalize;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 28px;
+    color: blue;
+    font-weight: 500;
+  }
+
+  span {
+    color: black;
+    font-size: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    margin: 15px;
+    font-size: 21px;
+    font-weight: 600;
+    color: black;
+  }
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 100px;
+  }
+
+  ol li {
+    list-style: none;
+    width: 15%;
+    background-color: #F0F9FF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+    padding-top: 80px;
+    box-shadow: 5px 5px 5px black;
+    text-transform: capitalize;
+  }
+
+  ol li:hover {
+    background: #ea6b17;
+    transform: scale(1.05);
+  }
+
+
+  ol li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  ol li:hover a {
+    color: white;
+  }
+
+  .hhh h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+  }
+</style>
+<header>
+  <div class="logo">Ashu<span> rohilla</span></div>
+  <nav>
+    <a href="index.html">home</a>
+    <a href="acwh.html">pratice work</a>
+    <a href="#">project</a>
+    <a href="#">contact</a>
+  </nav>
+  <div class="btn" id="btn">☀️</div>
 </header>
 
 <body>
@@ -66,8 +167,8 @@
       <li><a href="js22.html">Radio button banner</a></li>
       <li><a href="js23.html">Popup</a></li>
       <li><a href="jquerry1.html">jQuery 1</a></li>
-       <li><a href="jquerry2.html">jQuery 2</a></li>
-        <li><a href="jqerry3.html">jQuery 3</a></li>
+      <li><a href="jquerry2.html">jQuery 2</a></li>
+      <li><a href="jqerry3.html">jQuery 3</a></li>
 
 
     </ol>
