@@ -1,198 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>class work</title>
+  <title>Ashu Rohilla | Class Work</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      transition: 0.4s;
+    }
+
+    header {
+      width: 100%;
+      height: 70px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 7%;
+
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid #e6eaf0;
+      box-shadow: 0 5px 20px rgba(20, 30, 50, 0.05);
+
+      transition: 0.4s;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #2563eb;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #172033;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: #475569;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      padding: 8px 12px;
+
+      transition: 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+      width: 0;
+      height: 2px;
+
+      left: 50%;
+      bottom: 2px;
+
+      background: #2563eb;
+
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    nav a:hover::after {
+      width: 60%;
+    }
+
+    .btn {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      background: #f1f5f9;
+
+      font-size: 18px;
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: rotate(20deg) scale(1.08);
+      background: #e0e7ff;
+    }
+
+    .hero {
+      padding-top: 105px;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+
+    .small-title {
+      display: inline-block;
+
+      padding: 5px 13px;
+
+      border-radius: 30px;
+
+      background: #e8f0ff;
+      color: #2563eb;
+
+      font-size: 11px;
+      font-weight: 600;
+
+      margin-bottom: 5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 48px);
+
+      font-weight: 800;
+
+      color: #172033;
+
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .section {
+      width: 90%;
+      max-width: 1250px;
+
+      margin: auto;
+
+      padding: 5px 0 20px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 12px;
+    }
+
+    .section-title .line {
+      width: 35px;
+      height: 3px;
+
+      border-radius: 20px;
+      background: #2563eb;
+    }
+
+    .section-title h2 {
+      font-size: 21px;
+      color: #172033;
+    }
+
+    ol {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 10px;
+
+      list-style: none;
+    }
+
+    ol li {
+      min-height: 75px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 10px;
+
+      background: #ffffff;
+
+      border: 1px solid #e7ebf2;
+
+      border-radius: 14px;
+
+      box-shadow: 0 5px 15px rgba(15, 23, 42, 0.04);
+
+      transition: 0.3s;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    ol li::before {
+      content: "";
+
+      position: absolute;
+
+      width: 4px;
+      height: 100%;
+
+      left: 0;
+      top: 0;
+
+      background: #2563eb;
+
+      transform: scaleY(0);
+
+      transform-origin: bottom;
+
+      transition: 0.3s;
+    }
+
+    ol li:hover {
+      transform: translateY(-5px);
+
+      border-color: #bfdbfe;
+
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.11);
+    }
+
+    ol li:hover::before {
+      transform: scaleY(1);
+    }
+
+    ol li a {
+      text-decoration: none;
+
+      color: #334155;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      line-height: 1.4;
+
+      transition: 0.3s;
+    }
+
+    ol li:hover a {
+      color: #2563eb;
+    }
+
+    .js-section {
+      width: 100%;
+      padding: 18px 5% 20px;
+      background: #eef4ff;
+      border: 0;
+      margin: 0;
+    }
+
+    .js-section + .js-section {
+      padding-top: 18px;
+    }
+
+    .js-container {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .js-heading {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .js-heading span {
+      color: #2563eb;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+    }
+
+    .js-heading h2 {
+      margin-top: 2px;
+
+      font-size: 26px;
+
+      color: #172033;
+    }
+
+    footer {
+      padding: 12px;
+
+      text-align: center;
+
+      background: #111827;
+
+      color: #cbd5e1;
+
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    body.dark {
+      background: #0b1120;
+      color: #e2e8f0;
+    }
+
+    body.dark header {
+      background: rgba(15, 23, 42, 0.92);
+      border-color: #1e293b;
+    }
+
+    body.dark .logo span,
+    body.dark nav a {
+      color: #e2e8f0;
+    }
+
+    body.dark nav a:hover {
+      color: #60a5fa;
+    }
+
+    body.dark .hero h1,
+    body.dark .section-title h2,
+    body.dark .js-heading h2 {
+      color: #f8fafc;
+    }
+
+    body.dark .small-title {
+      background: #172554;
+      color: #60a5fa;
+    }
+
+    body.dark .btn {
+      background: #1e293b;
+    }
+
+    body.dark ol li {
+      background: #111827;
+      border-color: #263244;
+
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    body.dark ol li a {
+      color: #cbd5e1;
+    }
+
+    body.dark ol li:hover a {
+      color: #60a5fa;
+    }
+
+    body.dark .js-section {
+      background: #0f172a;
+      border: 0;
+    }
+
+  </style>
 </head>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    background: #F8F9FA;
-    cursor: pointer;
-  }
-  
-
-
-  .btn {
-    font-size: 25px;
-    cursor: pointer;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    background: white;
-    color: black;
-    padding: 20px 80px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    text-align: center;
-    text-transform: capitalize;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 28px;
-    color: blue;
-    font-weight: 500;
-  }
-
-  span {
-    color: black;
-    font-size: 20px;
-  }
-
-  nav a {
-    text-decoration: none;
-    margin: 15px;
-    font-size: 21px;
-    font-weight: 600;
-    color: black;
-  }
-
-  ol {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 100px;
-  }
-
-  ol li {
-    list-style: none;
-    width: 15%;
-    background-color: #F0F9FF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height: 100px;
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-    text-align: center;
-    padding-top: 80px;
-    box-shadow: 5px 5px 5px black;
-    text-transform: capitalize;
-  }
-
-  ol li:hover {
-    background: #ea6b17;
-    transform: scale(1.05);
-  }
-
-
-  ol li a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  ol li:hover a {
-    color: white;
-  }
-
-  .hhh h2 {
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: capitalize;
-  }
-</style>
-<header>
-  <div class="logo">Ashu<span> rohilla</span></div>
-  <nav>
-    <a href="index.html">home</a>
-    <a href="acwh.html">pratice work</a>
-    <a href="#">project</a>
-    <a href="#">contact</a>
-  </nav>
-  <div class="btn" id="btn">☀️</div>
-</header>
 
 <body>
 
+  <header>
 
-  <main>
-
-    <div id="list">
-
-
-
-      <ol>
-
-        <li><a href="video1.html">video page</a></li>
-        <li><a href="loginpage1.html">login</a></li>
-        <li><a href="webgallery.html">photo gallery</a></li>
-        <li><a href="school list h.html">table</a></li>
-        <li><a href="list1.html">number list</a></li>
-        <li><a href="newbanner1.html">slider</a></li>
-        <li><a href="menubutton.html">menu button</a></li>
-        <li><a href="file1.html">text box</a></li>
-        <li><a href="textanimation.html">text animation</a></li>
-        <li><a href="firmpage2.html">firm page</a></li>
-        <li><a href="newwork1.html">photo 360deg</a></li>
-
-      </ol>
+    <div class="logo">
+      Ashu<span> Rohilla</span>
     </div>
-    <hr>
-    <div class="hhh">
-      <h2>Javascript Work</h2>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="acwh.html">Practice Work</a>
+      <a href="#">Project</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="btn" id="btn">
+      ☀️
     </div>
+
+  </header>
+
+  <section class="hero">
+
+    <span class="small-title">
+      MY LEARNING JOURNEY
+    </span>
+
+    <h1>
+      Class <span>Work</span>
+    </h1>
+
+  </section>
+
+  <section class="section">
+
+    <div class="section-title">
+
+      <div class="line"></div>
+
+      <h2>
+        HTML & CSS Work
+      </h2>
+
     </div>
 
     <ol>
-      <li><a href="js2.html">creating tag in javascript</a></li>
-      <li><a href="buy1k.html">Color</a></li>
-      <li><a href="js10.html">color change</a></li>
-      <li><a href="js16.html">image change day</a></li>
-      <li><a href="js8.html">table page</a></li>
-      <li><a href="js7.html">time</a></li>
-      <li><a href="js6.html">calculater</a></li>
-      <li><a href="js2.html">click image change</a></li>
-      <li><a href="js17.html">login password</a></li>
-      <li><a href="js19.html">menu button</a></li>
-      <li><a href="js20.html">rotating banner</a></li>
-      <li><a href="js21.html">Froasting Banner</a></li>
-      <li><a href="js22.html">Radio button banner</a></li>
-      <li><a href="js23.html">Popup</a></li>
-      <li><a href="jquerry1.html">jQuery 1</a></li>
-      <li><a href="jquerry2.html">jQuery 2</a></li>
-      <li><a href="jqerry3.html">jQuery 3</a></li>
 
+      <li>
+        <a href="video1.html">Video Page</a>
+      </li>
+
+      <li>
+        <a href="loginpage1.html">Login</a>
+      </li>
+
+      <li>
+        <a href="webgallery.html">Photo Gallery</a>
+      </li>
+
+      <li>
+        <a href="school list h.html">Table</a>
+      </li>
+
+      <li>
+        <a href="list1.html">Number List</a>
+      </li>
+
+      <li>
+        <a href="newbanner1.html">Slider</a>
+      </li>
+
+      <li>
+        <a href="menubutton.html">Menu Button</a>
+      </li>
+
+      <li>
+        <a href="file1.html">Text Box</a>
+      </li>
+
+      <li>
+        <a href="textanimation.html">Text Animation</a>
+      </li>
+
+      <li>
+        <a href="firmpage2.html">Firm Page</a>
+      </li>
+
+      <li>
+        <a href="newwork1.html">Photo 360deg</a>
+      </li>
 
     </ol>
 
-  </main>
+  </section>
+
+  <section class="js-section">
+
+    <div class="js-container">
+
+      <div class="js-heading">
+
+        <span>Practice Collection</span>
+
+        <h2>
+          JavaScript Work
+        </h2>
+
+      </div>
+
+      <ol>
+
+        <li>
+          <a href="js2.html">
+            Creating Tag in JavaScript
+          </a>
+        </li>
+
+        <li>
+          <a href="buy1k.html">
+            Color
+          </a>
+        </li>
+
+        <li>
+          <a href="js10.html">
+            Color Change
+          </a>
+        </li>
+
+        <li>
+          <a href="js16.html">
+            Image Change Day
+          </a>
+        </li>
+
+        <li>
+          <a href="js8.html">
+            Table Page
+          </a>
+        </li>
+
+        <li>
+          <a href="js7.html">
+            Time
+          </a>
+        </li>
+
+        <li>
+          <a href="js6.html">
+            Calculator
+          </a>
+        </li>
+
+        <li>
+          <a href="js2.html">
+            Click Image Change
+          </a>
+        </li>
+
+        <li>
+          <a href="js17.html">
+            Login Password
+          </a>
+        </li>
+
+        <li>
+          <a href="js19.html">
+            Menu Button
+          </a>
+        </li>
+
+        <li>
+          <a href="js20.html">
+            Rotating Banner
+          </a>
+        </li>
+
+        <li>
+          <a href="js21.html">
+            Floating Banner
+          </a>
+        </li>
+
+        <li>
+          <a href="js22.html">
+            Radio Button Banner
+          </a>
+        </li>
+
+        <li>
+          <a href="js23.html">
+            Popup
+          </a>
+        </li>
+
+        <li>
+          <a href="jquerry1.html">
+            jQuery 1
+          </a>
+        </li>
+
+        <li>
+          <a href="jquerry2.html">
+            jQuery 2
+          </a>
+        </li>
+
+        <li>
+          <a href="jqerry3.html">
+            jQuery 3
+          </a>
+        </li>
+
+      </ol>
+
+    </div>
+
+  </section>
+
+  <section class="js-section">
+
+    <div class="js-container">
+
+      <div class="js-heading">
+
+        <span>Practice Collection</span>
+
+        <h2>
+          Bootstrap Work
+        </h2>
+
+      </div>
+
+      <ol>
+
+        <li>
+          <a href="bootstrap1.html">
+            Bootstrap Work 1
+          </a>
+        </li>
+
+      </ol>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    © 2026 <strong>Ashu Rohilla</strong> · Class Work Portfolio
+
+  </footer>
+
+  <script>
+
+    var btn = document.getElementById("btn");
+
+    btn.onclick = function () {
+
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+
+        btn.innerHTML = "🌙";
+
+      } else {
+
+        btn.innerHTML = "☀️";
+
+      }
+
+    };
+
+  </script>
+
 </body>
-<script>
-
-  var btn = document.getElementById("btn")
-
-  btn.onclick = function () {
-
-    document.body.classList.toggle("dark")
-
-
-    if (document.body.classList.contains("dark")) {
-      btn.innerHTML = "🌙"
-    }
-    else {
-      btn.innerHTML = "☀️"
-    }
-
-  }
-
-</script>
 
 </html>
