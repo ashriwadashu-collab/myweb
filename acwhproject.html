@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+      header {
+      width: 100%;
+      height: 70px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 7%;
+
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid #e6eaf0;
+      box-shadow: 0 5px 20px rgba(20, 30, 50, 0.05);
+
+      transition: 0.4s;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #2563eb;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #172033;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: #475569;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      padding: 8px 12px;
+
+      transition: 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+      width: 0;
+      height: 2px;
+
+      left: 50%;
+      bottom: 2px;
+
+      background: #2563eb;
+
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    nav a:hover::after {
+      width: 60%;
+    }
+
+    .btn {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      background: #f1f5f9;
+
+      font-size: 18px;
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: rotate(20deg) scale(1.08);
+      background: #e0e7ff;
+    }
+
+  .hello {
+    width: 260px;
+    padding: 25px 20px;
+    margin: 120px auto;
+
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.25);
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.hello:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.35);
+}
+
+.hello a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+</style>
+  <header>
+
+    <div class="logo">
+      Ashu<span> Rohilla</span>
+    </div>
+
+   <nav>
+        <a href="index.html">home</a>
+        <a href="acwh.html">pratice work</a>
+        <a href="acwhproject.html">project</a>
+        <a href="#">contact</a>
+    </nav>
+
+    <div class="btn" id="btn">
+      ☀️
+    </div>
+
+  </header>
+<body>
+    <div class="hello">
+        <a href="sep1.html">september AOTM</a>
+    </div>
+</body>
+</html>
